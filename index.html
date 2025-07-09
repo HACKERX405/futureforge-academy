@@ -54,20 +54,15 @@
       color: #ffdd57;
       margin-bottom: 1rem;
     }
-    .typewriter-container::after {
-      content: "";
-      animation: typing 5s steps(40, end), blink-caret .75s step-end infinite;
-      white-space: nowrap;
-      overflow: hidden;
-      display: inline-block;
-      vertical-align: bottom;
-      border-right: 2px solid white;
-    }
     .typewriter-container {
       font-size: 1.1rem;
       color: #fff;
       width: 100%;
       max-width: 100%;
+      border-right: 2px solid #fff;
+      white-space: nowrap;
+      overflow: hidden;
+      animation: typing 5s steps(60, end) 1, blink-caret .75s step-end infinite;
     }
     @keyframes typing {
       from { width: 0 }
