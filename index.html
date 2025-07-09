@@ -4,15 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>FutureForge Academy | Home Tuitions in Greater Noida</title>
-  <meta name="description" content="FutureForge Academy connects students and qualified tutors in Greater Noida for personalized home tuition from Pre-Primary to Class 10. Join now as student or teacher!" />
-  <meta name="keywords" content="home tuition, Greater Noida, tutor, teacher, student, class 10, FutureForge Academy, online teaching, home classes, primary education" />
-  <meta name="author" content="Akash Rawat" />
-  <meta property="og:title" content="FutureForge Academy - Home Tuitions in Greater Noida" />
-  <meta property="og:description" content="Join FutureForge Academy to find students or teachers for personalized home tuition in Greater Noida." />
-  <meta property="og:url" content="https://HACKERX405.github.io/futureforge-academy/" />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="https://HACKERX405.github.io/futureforge-academy/logo.png" />
-  <meta name="google-site-verification" content="4W-qO_M-snjwEVr_freWnGAo-10PwvnCN4pr6vHn6Wk" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     * {
       margin: 0;
@@ -20,207 +14,145 @@
       box-sizing: border-box;
     }
     body {
-      font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(135deg, #003366, #0077b6);
-      color: white;
-      min-height: 100vh;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #00c6ff, #0072ff);
+      color: #fff;
       overflow-x: hidden;
     }
     header {
-      padding: 2rem;
-      text-align: center;
-      background-color: rgba(0, 0, 0, 0.3);
-      backdrop-filter: blur(10px);
-    }
-    header h1 {
-      font-size: 2.8rem;
-      text-shadow: 2px 2px 8px #000;
-      color: #ffb703;
-    }
-    .hero {
       display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: space-around;
-      align-items: flex-start;
-      gap: 2rem;
-      padding: 2rem;
-      text-align: left;
-    }
-    .hero-section {
-      flex: 1 1 300px;
-      animation: fadeIn 2s ease-in-out;
-      background-color: rgba(255,255,255,0.05);
-      padding: 1.5rem;
-      border-radius: 12px;
-    }
-    .hero h2, .hero-section h2 {
-      font-size: 1.6rem;
-      margin-bottom: 1rem;
-      color: #ffd166;
-    }
-    .hero p, .hero-section p, .hero-section ul {
-      font-size: 1rem;
-      line-height: 1.6;
-    }
-    .hero-section ul li {
-      margin: 0.3rem 0;
-    }
-    .hero-buttons {
-      text-align: center;
-      margin-top: 1rem;
-    }
-    .hero-buttons button {
-      margin: 1rem;
+      justify-content: space-between;
+      align-items: center;
       padding: 1rem 2rem;
-      border: none;
-      background-color: #f77f00;
-      color: white;
-      font-size: 1.2rem;
-      border-radius: 12px;
-      cursor: pointer;
-      transition: transform 0.3s;
+      background-color: rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(6px);
+      position: sticky;
+      top: 0;
+      z-index: 999;
     }
-    .hero-buttons button:hover {
-      transform: scale(1.05);
+    header img {
+      height: 50px;
     }
-    .thank-you {
-      display: none;
-      width: 90%;
-      margin: 2rem auto;
-      background-color: #004d7a;
-      padding: 1rem;
-      border-radius: 10px;
-      text-align: center;
+    header nav a {
+      margin: 0 1rem;
+      text-decoration: none;
+      color: #fff;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+    header nav a:hover {
+      color: #ffdd57;
+    }
+    .main {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      padding: 4rem 2rem;
+      min-height: 90vh;
+      animation: fadeIn 2s ease-in-out;
+    }
+    .main-text {
+      flex: 1;
+      max-width: 600px;
+      padding-right: 2rem;
+      animation: slideInLeft 1s ease-in-out;
+    }
+    .main-text h1 {
+      font-size: 2.8rem;
+      color: #ffdd57;
+      margin-bottom: 1rem;
+    }
+    .main-text p {
       font-size: 1.1rem;
+      line-height: 1.8;
+      color: #f8f9fa;
     }
-    iframe {
-      width: 90%;
-      height: 600px;
-      margin: 2rem auto;
-      display: none;
-      border: none;
-      border-radius: 15px;
-      background-color: white;
+    .main-buttons {
+      margin-top: 2rem;
     }
-    .whatsapp-button {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background-color: #25d366;
-      color: white;
+    .main-buttons button {
+      margin-right: 1rem;
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      font-weight: 600;
+      background-color: #fff;
+      color: #0072ff;
       border: none;
-      padding: 15px 20px;
-      border-radius: 50px;
-      font-size: 16px;
+      border-radius: 30px;
       cursor: pointer;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-      z-index: 1000;
+      transition: all 0.3s;
     }
-    footer {
-      padding: 2rem;
+    .main-buttons button:hover {
+      background-color: #ffdd57;
+      color: #000;
+    }
+    .main-image {
+      flex: 1;
       text-align: center;
-      background-color: rgba(0,0,0,0.3);
-      font-size: 0.9rem;
+      animation: slideInRight 1s ease-in-out;
+    }
+    .main-image img {
+      width: 80%;
+      max-width: 400px;
     }
     @keyframes fadeIn {
-      0% { opacity: 0; transform: translateY(30px); }
-      100% { opacity: 1; transform: translateY(0); }
+      0% {opacity: 0;}
+      100% {opacity: 1;}
     }
-    @media screen and (max-width: 768px) {
-      header h1 {
-        font-size: 2rem;
-      }
-      .hero {
+    @keyframes slideInLeft {
+      0% {opacity: 0; transform: translateX(-50px);}
+      100% {opacity: 1; transform: translateX(0);}
+    }
+    @keyframes slideInRight {
+      0% {opacity: 0; transform: translateX(50px);}
+      100% {opacity: 1; transform: translateX(0);}
+    }
+    footer {
+      background: rgba(0,0,0,0.3);
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+    }
+    @media (max-width: 768px) {
+      .main {
         flex-direction: column;
-        padding: 1rem;
+        text-align: center;
       }
-      .hero-section {
-        padding: 1rem;
-      }
-      .hero-buttons button {
-        width: 80%;
-        font-size: 1rem;
-      }
-      iframe {
-        height: 500px;
+      .main-text, .main-image {
+        padding: 1rem 0;
       }
     }
   </style>
 </head>
 <body>
   <header>
-    <img src="1.png" alt="FutureForge Logo" style="height: 60px; vertical-align: middle; margin-right: 10px;">
-    <h1 style="display: inline-block; vertical-align: middle;">FutureForge Academy</h1>
+    <img src="1.png" alt="FutureForge Logo">
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#contact">Contact</a>
+      <a href="#login">Login</a>
+    </nav>
   </header>
-
-  <section class="hero">
-    <div class="hero-section">
-      <h2><span id="typing-text"></span></h2>
-      <p>FutureForge Academy connects dedicated, qualified teachers with students in Greater Noida for home tuition from Pre-Primary to Class 10. We match learners with mentors to build strong academic futures through personalized home-based education.</p>
-      <div class="hero-buttons">
-        <button onclick="showForm('student')">Login as Student</button>
-        <button onclick="showForm('teacher')">Login as Teacher</button>
+  <section class="main" id="home">
+    <div class="main-text">
+      <h1>Empowering Learning in Greater Noida</h1>
+      <p>FutureForge Academy helps you find trusted home tutors from Pre-Primary to Class 10. Whether you're a student seeking help or a teacher looking for students, we connect you with the right match at your doorstep.</p>
+      <div class="main-buttons">
+        <button onclick="showForm('student')">Student Form</button>
+        <button onclick="showForm('teacher')">Teacher Form</button>
+        <button onclick="location.href='https://wa.me/917011593579'">WhatsApp</button>
       </div>
     </div>
-    <div class="hero-section">
-      <h2>Why Choose Us?</h2>
-      <ul>
-        <li>✅ Verified and Experienced Tutors</li>
-        <li>✅ Personalized Home-Based Learning</li>
-        <li>✅ All Sectors of Greater Noida Covered</li>
-        <li>✅ Flexible Timing & Affordable Rates</li>
-        <li>✅ Progress Updates for Parents</li>
-      </ul>
-    </div>
-    <div class="hero-section">
-      <h2>Classes Covered</h2>
-      <ul>
-        <li>👶 Pre-Primary (Nursery–UKG)</li>
-        <li>📚 Primary (Class 1–5)</li>
-        <li>🧠 Middle School (Class 6–8)</li>
-        <li>🎓 High School (Class 9–10)</li>
-      </ul>
-    </div>
-    <div class="hero-section">
-      <h2>Subjects Offered</h2>
-      <ul>
-        <li>📘 English</li>
-        <li>📗 Mathematics</li>
-        <li>📙 Science</li>
-        <li>📕 Hindi</li>
-        <li>📒 EVS</li>
-        <li>🧮 Abacus</li>
-        <li>🎨 Drawing</li>
-        <li>💻 Computers</li>
-      </ul>
-    </div>
-    <div class="hero-section">
-      <h2>Greater Noida Areas</h2>
-      <ul>
-        <li>🏡 Alpha, Beta, Gamma, Delta</li>
-        <li>🏡 Zeta, Pi, Sigma, Omicron</li>
-        <li>🏡 Knowledge Park & Nearby</li>
-      </ul>
-    </div>
-    <div class="hero-section">
-      <h2>Testimonials</h2>
-      <ul>
-        <li>👩‍👧 "My daughter’s grades improved in 2 months!" – Ritu (Parent)</li>
-        <li>👨‍🎓 "Now I enjoy studying!" – Aryan (Class 9)</li>
-        <li>👩‍🏫 "Connected with students near me easily." – Kavita (Teacher)</li>
-      </ul>
+    <div class="main-image">
+      <img src="1.png" alt="Illustration">
     </div>
   </section>
 
-  <div id="thank-you" class="thank-you">✅ Thank you for choosing FutureForge Academy! Please fill out the form below.</div>
+  <iframe id="student-form" style="display:none; width:100%; height:600px; border:none;" src="https://docs.google.com/forms/d/e/1FAIpQLSdHgMNPZBaAjkIxAkwbLgOkZtmuJrReK1c7PBfJ6tv3Nmw53A/viewform?embedded=true"></iframe>
+  <iframe id="teacher-form" style="display:none; width:100%; height:600px; border:none;" src="https://docs.google.com/forms/d/e/1FAIpQLSfCi3ogaou26I2HshuDpE2rXMeMvmclj72LSzOUg4MlwaOBEw/viewform?embedded=true"></iframe>
 
-  <iframe id="student-form" src="https://docs.google.com/forms/d/e/1FAIpQLSdHgMNPZBaAjkIxAkwbLgOkZtmuJrReK1c7PBfJ6tv3Nmw53A/viewform?embedded=true"></iframe>
-  <iframe id="teacher-form" src="https://docs.google.com/forms/d/e/1FAIpQLSfCi3ogaou26I2HshuDpE2rXMeMvmclj72LSzOUg4MlwaOBEw/viewform?embedded=true"></iframe>
-
-  <a class="whatsapp-button" href="https://wa.me/917011593579?text=Hi!%20I%20am%20interested%20in%20FutureForge%20Academy%20tuition%20services." target="_blank">Chat on WhatsApp</a>
-
-  <footer>
+  <footer id="contact">
     <p>📞 7011593579 | 9919627896<br>
     📧 soham.kanaujia.25@gmail.com<br>
     &copy; 2025 FutureForge Academy | Designed by Akash Rawat</p>
@@ -230,25 +162,12 @@
     function showForm(type) {
       document.getElementById("student-form").style.display = "none";
       document.getElementById("teacher-form").style.display = "none";
-      document.getElementById("thank-you").style.display = "block";
       if (type === "student") {
         document.getElementById("student-form").style.display = "block";
       } else {
         document.getElementById("teacher-form").style.display = "block";
       }
     }
-
-    const text = "Shaping Bright Futures with Quality Education - Home Tuitions from Pre-Primary to Class 10 in Greater Noida";
-    const typingElement = document.getElementById("typing-text");
-    let i = 0;
-    function typeEffect() {
-      if (i < text.length) {
-        typingElement.innerHTML += text.charAt(i);
-        i++;
-        setTimeout(typeEffect, 40);
-      }
-    }
-    window.onload = typeEffect;
   </script>
 </body>
 </html>
