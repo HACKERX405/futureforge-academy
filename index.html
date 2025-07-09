@@ -43,10 +43,19 @@
     }
     .main-text { flex: 1; max-width: 600px; padding-right: 2rem; }
     .main-text h1 { font-size: 2.8rem; color: #ffdd57; margin-bottom: 1rem; }
-    .main-text p {
+    .typewriter-text {
       font-size: 1.1rem;
       line-height: 1.8;
       color: #f8f9fa;
+      border-right: .1em solid orange;
+      white-space: nowrap;
+      overflow: hidden;
+      width: 0;
+      animation: typing 5s steps(70, end) forwards;
+    }
+    @keyframes typing {
+      from { width: 0; }
+      to { width: 100%; }
     }
     .main-buttons { margin-top: 2rem; }
     .main-buttons button {
@@ -110,7 +119,7 @@
   <section class="main" id="home">
     <div class="main-text">
       <h1>Empowering Learning in Greater Noida</h1>
-      <p>FutureForge Academy helps you find trusted home tutors from Pre-Primary to Class 10. Whether you're a student seeking help or a teacher looking for students, we connect you with the right match at your doorstep.</p>
+      <p class="typewriter-text">FutureForge Academy helps you find trusted home tutors from Pre-Primary to Class 10. Whether you're a student seeking help or a teacher looking for students, we connect you with the right match at your doorstep.</p>
       <div class="main-buttons">
         <button onclick="showForm('student')">Student Form</button>
         <button onclick="showForm('teacher')">Teacher Form</button>
@@ -171,7 +180,7 @@
   <script>
     function showForm(type) {
       document.getElementById("student-form").style.display = "none";
-      document.getElementById("teacher-form").style.display = "none"; 
+      document.getElementById("teacher-form").style.display = "none";
       const form = document.getElementById(type + "-form");
       if (form) {
         form.style.display = "block";
