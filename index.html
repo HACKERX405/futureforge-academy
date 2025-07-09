@@ -1,4 +1,4 @@
-<!-- Full site with animation, logo, forms, WhatsApp and contact icons -->
+""<!-- Full site with animation, logo, forms, WhatsApp and contact icons + Dark/Light Toggle -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,12 +9,22 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --bg-light: #ffffff;
+      --text-light: #333;
+      --bg-dark: #121212;
+      --text-dark: #eee;
+    }
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       font-family: 'Poppins', sans-serif;
-      background-color: #ffffff;
-      color: #333;
-      overflow-x: hidden;
+      background-color: var(--bg-light);
+      color: var(--text-light);
+      transition: background 0.3s, color 0.3s;
+    }
+    body.dark {
+      background-color: var(--bg-dark);
+      color: var(--text-dark);
     }
     header {
       display: flex;
@@ -27,6 +37,9 @@
       top: 0;
       z-index: 999;
     }
+    body.dark header {
+      background-color: #1e1e1e;
+    }
     header img {
       height: 50px;
       border-radius: 10px;
@@ -34,18 +47,25 @@
     header nav a {
       margin: 0 1rem;
       text-decoration: none;
-      color: #333;
+      color: inherit;
       font-weight: 600;
       transition: color 0.3s;
     }
-    header nav a:hover { color: #007bff; }
+    .toggle-btn {
+      background: none;
+      border: 1px solid #999;
+      padding: 0.4rem 0.8rem;
+      border-radius: 8px;
+      cursor: pointer;
+      color: inherit;
+      font-weight: bold;
+    }
     .main {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
       align-items: center;
       padding: 4rem 2rem;
-      background: #fff;
     }
     .main-text {
       flex: 1;
@@ -54,14 +74,13 @@
     }
     .main-text h1 {
       font-size: 2.8rem;
-      color: #222;
       margin-bottom: 1rem;
     }
     .typewriter-container {
       font-size: 1.1rem;
       overflow: hidden;
       white-space: nowrap;
-      border-right: 2px solid #555;
+      border-right: 2px solid currentColor;
       animation: typing 6s steps(120, end) 1, blink 0.75s step-end infinite;
       width: 100%;
     }
@@ -118,11 +137,16 @@
       box-shadow: 0 4px 16px rgba(0,0,0,0.05);
       transition: transform 0.4s ease;
     }
+    body.dark .highlight-box,
+    body.dark .card,
+    body.dark .testimonial {
+      background-color: #222;
+      color: #ddd;
+    }
     .highlight-box:hover, .card:hover, .testimonial:hover {
       transform: translateY(-5px);
     }
     .highlight-box h3, .card h3, .testimonial h3 {
-      color: #333;
       margin-bottom: 0.5rem;
       font-size: 1.4rem;
     }
@@ -130,7 +154,6 @@
       padding-left: 1.2rem;
       text-align: left;
       font-size: 0.95rem;
-      color: #555;
     }
     .whatsapp-btn {
       position: fixed;
@@ -146,8 +169,10 @@
       background: #f4f4f4;
       text-align: center;
       padding: 2rem;
-      color: #333;
       font-size: 0.9rem;
+    }
+    body.dark footer {
+      background: #1e1e1e;
     }
     @media (max-width: 768px) {
       .main, .highlight-section, .faq, .testimonials {
@@ -180,6 +205,7 @@
       <a href="#subjects">Subjects</a>
       <a href="#contact">Contact</a>
     </nav>
+    <button class="toggle-btn" onclick="toggleMode()">🌗</button>
   </header>
 
   <!-- Main Section -->
@@ -272,5 +298,16 @@
     <p>🏫 Location: Greater Noida, Uttar Pradesh</p>
     <p>&copy; 2025 FutureForge Academy. All rights reserved.</p>
   </footer>
+
+  <!-- Script for theme toggle -->
+  <script>
+    function toggleMode() {
+      document.body.classList.toggle('dark');
+      localStorage.setItem('theme', document.body.classList.contains('dark') ? 'dark' : 'light');
+    }
+    if (localStorage.getItem('theme') === 'dark') {
+      document.body.classList.add('dark');
+    }
+  </script>
 </body>
 </html>
