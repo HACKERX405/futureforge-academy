@@ -53,9 +53,8 @@
       line-height: 1.8;
       color: #f8f9fa;
     }
-    .main-buttons { margin-top: 2rem; }
+    .main-buttons { margin-top: 2rem; display: flex; flex-wrap: wrap; gap: 1rem; }
     .main-buttons button {
-      margin-right: 1rem;
       padding: 0.75rem 1.5rem;
       font-size: 1rem;
       font-weight: 600;
@@ -64,13 +63,14 @@
       border: none;
       border-radius: 30px;
       cursor: pointer;
+      flex: 1 1 120px;
     }
     .main-buttons button:hover {
       background-color: #ffdd57;
       color: #000;
     }
     .main-image { flex: 1; text-align: center; }
-    .main-image img { width: 80%; max-width: 400px; }
+    .main-image img { width: 100%; max-width: 400px; height: auto; }
     section { padding: 2rem; }
     .highlight-section, .faq {
       display: flex;
@@ -119,6 +119,14 @@
       .main, .highlight-section, .faq {
         flex-direction: column;
         text-align: center;
+      }
+      .main-text { padding-right: 0; }
+      .main-buttons {
+        flex-direction: column;
+        align-items: center;
+      }
+      .main-buttons button {
+        width: 80%;
       }
     }
   </style>
