@@ -1,18 +1,13 @@
+<!-- All-in-one upgraded site with gallery, video, pricing, and FAQ -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>FutureForge Academy | Home Tuitions in Greater Noida</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       font-family: 'Poppins', sans-serif;
       background: linear-gradient(to right, #00c6ff, #0072ff);
@@ -30,9 +25,7 @@
       top: 0;
       z-index: 999;
     }
-    header img {
-      height: 50px;
-    }
+    header img { height: 50px; }
     header nav a {
       margin: 0 1rem;
       text-decoration: none;
@@ -40,37 +33,18 @@
       font-weight: 600;
       transition: color 0.3s;
     }
-    header nav a:hover {
-      color: #ffdd57;
-    }
+    header nav a:hover { color: #ffdd57; }
     .main {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
       align-items: center;
       padding: 4rem 2rem;
-      min-height: 90vh;
-      animation: fadeIn 2s ease-in-out;
     }
-    .main-text {
-      flex: 1;
-      max-width: 600px;
-      padding-right: 2rem;
-      animation: slideInLeft 1s ease-in-out;
-    }
-    .main-text h1 {
-      font-size: 2.8rem;
-      color: #ffdd57;
-      margin-bottom: 1rem;
-    }
-    .main-text p {
-      font-size: 1.1rem;
-      line-height: 1.8;
-      color: #f8f9fa;
-    }
-    .main-buttons {
-      margin-top: 2rem;
-    }
+    .main-text { flex: 1; max-width: 600px; padding-right: 2rem; }
+    .main-text h1 { font-size: 2.8rem; color: #ffdd57; margin-bottom: 1rem; }
+    .main-text p { font-size: 1.1rem; line-height: 1.8; color: #f8f9fa; }
+    .main-buttons { margin-top: 2rem; }
     .main-buttons button {
       margin-right: 1rem;
       padding: 0.75rem 1.5rem;
@@ -81,84 +55,48 @@
       border: none;
       border-radius: 30px;
       cursor: pointer;
-      transition: all 0.3s;
     }
     .main-buttons button:hover {
       background-color: #ffdd57;
       color: #000;
     }
-    .main-image {
-      flex: 1;
-      text-align: center;
-      animation: slideInRight 1s ease-in-out;
-    }
-    .main-image img {
-      width: 80%;
-      max-width: 400px;
-    }
-    .highlight-section {
+    .main-image { flex: 1; text-align: center; }
+    .main-image img { width: 80%; max-width: 400px; }
+    section { padding: 2rem; }
+    .highlight-section, .gallery, .video-section, .pricing, .faq {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-around;
-      padding: 2rem;
-      background-color: rgba(255,255,255,0.1);
+      gap: 1.5rem;
     }
-    .highlight-box {
-      flex: 1 1 250px;
-      margin: 1rem;
+    .highlight-box, .card {
       background-color: rgba(0,0,0,0.2);
       border-radius: 12px;
       padding: 1rem;
-      transition: transform 0.3s;
+      flex: 1 1 250px;
+      text-align: center;
     }
-    .highlight-box:hover {
-      transform: scale(1.05);
-    }
-    .highlight-box h3 {
-      color: #ffdd57;
-      margin-bottom: 0.5rem;
-    }
-    .highlight-box ul {
-      padding-left: 1.2rem;
-    }
-    iframe {
-      width: 100%;
-      height: 600px;
-      border: none;
-      display: none;
-    }
+    .highlight-box h3, .card h3 { color: #ffdd57; margin-bottom: 0.5rem; }
+    .highlight-box ul, .faq ul { padding-left: 1.2rem; }
+    iframe { width: 100%; height: 600px; border: none; display: none; margin-top: 1rem; }
+    .video-section iframe { display: block; height: 300px; }
     footer {
       background: rgba(0,0,0,0.3);
       text-align: center;
       padding: 2rem;
       font-size: 0.9rem;
     }
-    @keyframes fadeIn {
-      0% {opacity: 0;}
-      100% {opacity: 1;}
-    }
-    @keyframes slideInLeft {
-      0% {opacity: 0; transform: translateX(-50px);}
-      100% {opacity: 1; transform: translateX(0);}
-    }
-    @keyframes slideInRight {
-      0% {opacity: 0; transform: translateX(50px);}
-      100% {opacity: 1; transform: translateX(0);}
-    }
     @media (max-width: 768px) {
-      .main {
+      .main, .highlight-section, .gallery, .video-section, .pricing, .faq {
         flex-direction: column;
         text-align: center;
-      }
-      .main-text, .main-image {
-        padding: 1rem 0;
       }
     }
   </style>
 </head>
 <body>
   <header>
-    <img src="1.png" alt="FutureForge Logo">
+    <img src="1.png" alt="Logo">
     <nav>
       <a href="#home">Home</a>
       <a href="#contact">Contact</a>
@@ -185,9 +123,8 @@
     <div class="highlight-box">
       <h3>📘 Subjects Offered</h3>
       <ul>
-        <li>English, Hindi</li>
-        <li>Maths, Science, EVS</li>
-        <li>Abacus, Drawing, Computers</li>
+        <li>English, Hindi, Maths, Science</li>
+        <li>EVS, Drawing, Abacus, Computers</li>
       </ul>
     </div>
     <div class="highlight-box">
@@ -195,15 +132,56 @@
       <ul>
         <li>Pre-Primary to Class 10</li>
         <li>CBSE, ICSE, State Board</li>
-        <li>Flexible Timings</li>
       </ul>
     </div>
     <div class="highlight-box">
       <h3>📍 Areas We Serve</h3>
       <ul>
-        <li>Alpha, Beta, Gamma</li>
-        <li>Delta, Pi, Sigma, Omicron</li>
-        <li>Knowledge Park, TechZone</li>
+        <li>Alpha, Beta, Gamma, Delta</li>
+        <li>Pi, Sigma, Knowledge Park</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="gallery">
+    <div class="card">
+      <img src="1.png" alt="gallery image" style="width:100%; border-radius: 10px;">
+      <h3>Smart Tutors</h3>
+    </div>
+    <div class="card">
+      <img src="1.png" alt="gallery image" style="width:100%; border-radius: 10px;">
+      <h3>Motivated Students</h3>
+    </div>
+  </section>
+
+  <section class="video-section">
+    <div class="card">
+      <h3>Why Choose Us</h3>
+      <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+    </div>
+  </section>
+
+  <section class="pricing">
+    <div class="card">
+      <h3>Basic</h3>
+      <p>₹500/month<br>1 Student Slot</p>
+    </div>
+    <div class="card">
+      <h3>Standard</h3>
+      <p>₹1000/month<br>Up to 3 Students</p>
+    </div>
+    <div class="card">
+      <h3>Premium</h3>
+      <p>₹1500/month<br>Unlimited Students</p>
+    </div>
+  </section>
+
+  <section class="faq">
+    <div class="card">
+      <h3>FAQs</h3>
+      <ul>
+        <li><strong>Q:</strong> Can I choose my tutor?<br><strong>A:</strong> Yes, based on subject and location.</li>
+        <li><strong>Q:</strong> Are timings flexible?<br><strong>A:</strong> Yes, tutors will contact to set time.</li>
       </ul>
     </div>
   </section>
