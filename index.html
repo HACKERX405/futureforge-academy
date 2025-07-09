@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FutureForge Academy</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #003366, #0077b6);
+      color: white;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+    header {
+      padding: 2rem;
+      text-align: center;
+      background-color: rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(10px);
+    }
+    header h1 {
+      font-size: 2.8rem;
+      text-shadow: 2px 2px 8px #000;
+      color: #ffb703;
+    }
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 60vh;
+      text-align: center;
+    }
+    .hero h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      animation: fadeIn 2s ease-in-out;
+      max-width: 600px;
+    }
+    .hero-buttons button {
+      margin: 1rem;
+      padding: 1rem 2rem;
+      border: none;
+      background-color: #f77f00;
+      color: white;
+      font-size: 1.2rem;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+    .hero-buttons button:hover {
+      transform: scale(1.05);
+    }
+    .login-page {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      padding: 3rem;
+    }
+    .login-page input {
+      margin: 1rem;
+      padding: 0.8rem;
+      width: 250px;
+      border-radius: 10px;
+      border: none;
+    }
+    .login-page button {
+      padding: 0.8rem 2rem;
+      border: none;
+      background-color: #ff6700;
+      color: white;
+      border-radius: 10px;
+    }
+    footer {
+      padding: 2rem;
+      text-align: center;
+      background-color: rgba(0,0,0,0.3);
+      font-size: 0.9rem;
+    }
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(30px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>FutureForge Academy</h1>
+  </header>
+
+  <section class="hero">
+    <h2>Shaping Bright Futures with Quality Education - Home Tuitions from Pre-Primary to Class 10 in Greater Noida</h2>
+    <div class="hero-buttons">
+      <button onclick="showLogin('student')">Login as Student</button>
+      <button onclick="showLogin('teacher')">Login as Teacher</button>
+    </div>
+  </section>
+
+  <div id="student-login" class="login-page">
+    <h2>Student Login</h2>
+    <input type="text" placeholder="Student Email" />
+    <input type="password" placeholder="Password" />
+    <button>Login</button>
+  </div>
+
+  <div id="teacher-login" class="login-page">
+    <h2>Teacher Login</h2>
+    <input type="text" placeholder="Teacher Email" />
+    <input type="password" placeholder="Password" />
+    <button>Login</button>
+  </div>
+
+  <footer>
+    <p>📞 7011593579 | 9919627896<br>
+    📧 soham.kanaujia.25@gmail.com<br>
+    &copy; 2025 FutureForge Academy | Designed by Akash Rawat</p>
+  </footer>
+
+  <script>
+    function showLogin(type) {
+      document.getElementById("student-login").style.display = "none";
+      document.getElementById("teacher-login").style.display = "none";
+      if (type === "student") {
+        document.getElementById("student-login").style.display = "flex";
+      } else {
+        document.getElementById("teacher-login").style.display = "flex";
+      }
+    }
+  </script>
+</body>
+</html>
