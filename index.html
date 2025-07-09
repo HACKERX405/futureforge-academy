@@ -63,6 +63,16 @@
     .hero-buttons button:hover {
       transform: scale(1.05);
     }
+    .thank-you {
+      display: none;
+      width: 90%;
+      margin: 2rem auto;
+      background-color: #004d7a;
+      padding: 1rem;
+      border-radius: 10px;
+      text-align: center;
+      font-size: 1.1rem;
+    }
     iframe {
       width: 90%;
       height: 600px;
@@ -113,6 +123,8 @@
     </div>
   </section>
 
+  <div id="thank-you" class="thank-you">✅ Thank you for choosing FutureForge Academy! Please fill out the form below.</div>
+
   <!-- Embedded Google Forms -->
   <iframe id="student-form" src="https://docs.google.com/forms/d/e/1FAIpQLSdHgMNPZBaAjkIxAkwbLgOkZtmuJrReK1c7PBfJ6tv3Nmw53A/viewform?embedded=true"></iframe>
   <iframe id="teacher-form" src="https://docs.google.com/forms/d/e/1FAIpQLSfCi3ogaou26I2HshuDpE2rXMeMvmclj72LSzOUg4MlwaOBEw/viewform?embedded=true"></iframe>
@@ -129,6 +141,7 @@
     function showForm(type) {
       document.getElementById("student-form").style.display = "none";
       document.getElementById("teacher-form").style.display = "none";
+      document.getElementById("thank-you").style.display = "block";
       if (type === "student") {
         document.getElementById("student-form").style.display = "block";
       } else {
