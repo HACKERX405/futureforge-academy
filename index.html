@@ -1,4 +1,4 @@
-<!-- Full site with animation, logo, forms and mobile view fixed -->
+<!-- Full site with animation, logo, forms, WhatsApp and contact icons -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,7 +27,12 @@
       top: 0;
       z-index: 999;
     }
-    header img { height: 50px; border-radius: 10px; }
+    header img {
+      height: 50px;
+      border-radius: 10px;
+      background-color: #fff;
+      padding: 4px;
+    }
     header nav a {
       margin: 0 1rem;
       text-decoration: none;
@@ -126,6 +131,16 @@
       display: none;
       margin-top: 1rem;
     }
+    .whatsapp-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 9999;
+    }
+    .whatsapp-btn img {
+      width: 60px;
+      height: 60px;
+    }
     footer {
       background: rgba(0,0,0,0.3);
       text-align: center;
@@ -150,7 +165,7 @@
 </head>
 <body>
   <header>
-    <img src="https://i.ibb.co/HVkrddM/logo-futureforge.png" alt="FutureForge Logo">
+    <img src="https://i.ibb.co/VjnyrJ8/1.png" alt="FutureForge Logo">
     <nav>
       <a href="#">Home</a>
       <a href="#subjects">Subjects</a>
@@ -204,8 +219,12 @@
   </section>
   <iframe id="student-form" src="https://docs.google.com/forms/d/e/1FAIpQLSf_D7UuOdI9yfPoE7hP3Ztn9D6KkL65GyUGZoCmVdV3tRlb4w/viewform?embedded=true"></iframe>
   <iframe id="teacher-form" src="https://docs.google.com/forms/d/e/1FAIpQLSfCi3ogaou26I2HshuDpE2rXMeMvmclj72LSzOUg4MlwaOBEw/viewform?embedded=true"></iframe>
+  <a class="whatsapp-btn" href="https://wa.me/919999999999" target="_blank">
+    <img src="https://cdn-icons-png.flaticon.com/512/124/124034.png" alt="WhatsApp">
+  </a>
   <footer>
-    <p>&copy; 2025 FutureForge Academy. All rights reserved.</p>
+    <p id="contact">&copy; 2025 FutureForge Academy. All rights reserved.</p>
+    <p>Email: contact@futureforgeacademy.in | Phone: +91-99999-99999</p>
   </footer>
   <script>
     function showForm(type) {
