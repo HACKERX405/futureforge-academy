@@ -48,19 +48,6 @@
       line-height: 1.8;
       color: #f8f9fa;
     }
-    .typewriter-text::after {
-      content: '';
-      display: inline-block;
-      width: 1px;
-      background: orange;
-      margin-left: 5px;
-      animation: blink 1s infinite;
-      vertical-align: bottom;
-    }
-    @keyframes blink {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0; }
-    }
     .main-buttons { margin-top: 2rem; }
     .main-buttons button {
       margin-right: 1rem;
@@ -124,7 +111,9 @@
     <div class="main-text">
       <h1>Empowering Learning in Greater Noida</h1>
       <p class="typewriter-container">
-        <span id="typewriter" class="typewriter-text"></span>
+        <span class="typewriter-text">
+          FutureForge Academy helps you find trusted home tutors from Pre-Primary to Class 10. Whether you're a student seeking help or a teacher looking for students, we connect you with the right match at your doorstep.
+        </span>
       </p>
       <div class="main-buttons">
         <button onclick="showForm('student')">Student Form</button>
@@ -193,17 +182,6 @@
         form.scrollIntoView({ behavior: "smooth" });
       }
     }
-
-    const text = "FutureForge Academy helps you find trusted home tutors from Pre-Primary to Class 10. Whether you're a student seeking help or a teacher looking for students, we connect you with the right match at your doorstep.";
-    let i = 0;
-    function typeWriter() {
-      if (i < text.length) {
-        document.getElementById("typewriter").innerHTML += text.charAt(i);
-        i++;
-        setTimeout(typeWriter, 30);
-      }
-    }
-    window.onload = typeWriter;
   </script>
 </body>
 </html>
