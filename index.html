@@ -131,3 +131,75 @@
     }
   </style>
 </head>
+<body>
+  <header>
+    <img src="logo.png" alt="FutureForge Logo">
+    <nav>
+      <a href="#">Home</a>
+      <a href="#subjects">Subjects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+  <section class="main">
+    <div class="main-text">
+      <h1>FutureForge Academy</h1>
+      <div class="typewriter-container">Helping you find trusted tutors from Pre-Primary to Class 10 at your doorstep in Greater Noida.</div>
+      <div class="main-buttons">
+        <button onclick="showForm('student')">Student Form</button>
+        <button onclick="showForm('teacher')">Teacher Form</button>
+      </div>
+    </div>
+    <div class="main-image">
+      <img src="https://i.ibb.co/VjNYrJ8/tutor-image.png" alt="Tutor Illustration">
+    </div>
+  </section>
+  <section id="subjects" class="highlight-section">
+    <div class="highlight-box">
+      <h3>📘 Subjects Offered</h3>
+      <ul>
+        <li>English, Hindi, Maths, Science</li>
+        <li>EVS, Drawing, Abacus, Computers</li>
+      </ul>
+    </div>
+    <div class="highlight-box">
+      <h3>🎓 Classes Covered</h3>
+      <ul>
+        <li>Pre-Primary to Class 10</li>
+        <li>CBSE, ICSE, State Board</li>
+      </ul>
+    </div>
+    <div class="highlight-box">
+      <h3>📍 Areas We Serve</h3>
+      <ul>
+        <li>Alpha, Beta, Gamma, Delta</li>
+        <li>Pi, Sigma, Knowledge Park</li>
+      </ul>
+    </div>
+  </section>
+  <section class="faq">
+    <div class="card">
+      <h3>FAQs</h3>
+      <ul>
+        <li><strong>Q:</strong> Can I choose my tutor?<br><strong>A:</strong> Yes, based on subject and location.</li>
+        <li><strong>Q:</strong> Are timings flexible?<br><strong>A:</strong> Yes, tutors will contact to set time.</li>
+      </ul>
+    </div>
+  </section>
+  <iframe id="student-form" src="https://docs.google.com/forms/d/e/1FAIpQLSe_student_form_link/embedded=true"></iframe>
+  <iframe id="teacher-form" src="https://docs.google.com/forms/d/e/1FAIpQLSfCi3ogaou26I2HshuDpE2rXMeMvmclj72LSzOUg4MlwaOBEw/viewform?embedded=true"></iframe>
+  <footer>
+    <p>&copy; 2025 FutureForge Academy. All rights reserved.</p>
+  </footer>
+  <script>
+    function showForm(type) {
+      document.getElementById("student-form").style.display = "none";
+      document.getElementById("teacher-form").style.display = "none";
+      const form = document.getElementById(type + "-form");
+      if (form) {
+        form.style.display = "block";
+        form.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  </script>
+</body>
+</html>
