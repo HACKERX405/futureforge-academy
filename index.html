@@ -56,25 +56,13 @@
     .hero-buttons button:hover {
       transform: scale(1.05);
     }
-    .login-page {
+    iframe {
+      width: 90%;
+      height: 600px;
+      margin: 2rem auto;
       display: none;
-      flex-direction: column;
-      align-items: center;
-      padding: 3rem;
-    }
-    .login-page input {
-      margin: 1rem;
-      padding: 0.8rem;
-      width: 250px;
-      border-radius: 10px;
       border: none;
-    }
-    .login-page button {
-      padding: 0.8rem 2rem;
-      border: none;
-      background-color: #ff6700;
-      color: white;
-      border-radius: 10px;
+      border-radius: 15px;
     }
     footer {
       padding: 2rem;
@@ -96,24 +84,13 @@
   <section class="hero">
     <h2>Shaping Bright Futures with Quality Education - Home Tuitions from Pre-Primary to Class 10 in Greater Noida</h2>
     <div class="hero-buttons">
-      <button onclick="showLogin('student')">Login as Student</button>
-      <button onclick="showLogin('teacher')">Login as Teacher</button>
+      <button onclick="showForm('student')">Login as Student</button>
+      <button onclick="showForm('teacher')">Login as Teacher</button>
     </div>
   </section>
 
-  <div id="student-login" class="login-page">
-    <h2>Student Login</h2>
-    <input type="text" placeholder="Student Email" />
-    <input type="password" placeholder="Password" />
-    <button>Login</button>
-  </div>
-
-  <div id="teacher-login" class="login-page">
-    <h2>Teacher Login</h2>
-    <input type="text" placeholder="Teacher Email" />
-    <input type="password" placeholder="Password" />
-    <button>Login</button>
-  </div>
+  <iframe id="student-form" src="https://docs.google.com/forms/d/e/1FAIpQLSfb4_example_student_form/viewform?embedded=true"></iframe>
+  <iframe id="teacher-form" src="https://docs.google.com/forms/d/e/1FAIpQLSfb4_example_teacher_form/viewform?embedded=true"></iframe>
 
   <footer>
     <p>📞 7011593579 | 9919627896<br>
@@ -122,13 +99,13 @@
   </footer>
 
   <script>
-    function showLogin(type) {
-      document.getElementById("student-login").style.display = "none";
-      document.getElementById("teacher-login").style.display = "none";
+    function showForm(type) {
+      document.getElementById("student-form").style.display = "none";
+      document.getElementById("teacher-form").style.display = "none";
       if (type === "student") {
-        document.getElementById("student-login").style.display = "flex";
+        document.getElementById("student-form").style.display = "block";
       } else {
-        document.getElementById("teacher-login").style.display = "flex";
+        document.getElementById("teacher-form").style.display = "block";
       }
     }
   </script>
