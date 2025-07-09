@@ -190,8 +190,11 @@
     </div>
   </section>
 
-  <iframe id="student-form" src="https://docs.google.com/forms/d/e/1FAIpQLSdHgMNPZBaAjkIxAkwbLgOkZtmuJrReK1c7PBfJ6tv3Nmw53A/viewform?embedded=true"></iframe>
-  <iframe id="teacher-form" src="https://docs.google.com/forms/d/e/1FAIpQLSfCi3ogaou26I2HshuDpE2rXMeMvmclj72LSzOUg4MlwaOBEw/viewform?embedded=true"></iframe>
+  <section id="login" style="padding: 2rem 1rem;">
+    <h2 style="text-align:center; margin-bottom: 1rem;">Apply Now</h2>
+    <iframe id="student-form" src="https://docs.google.com/forms/d/e/1FAIpQLSdHgMNPZBaAjkIxAkwbLgOkZtmuJrReK1c7PBfJ6tv3Nmw53A/viewform?embedded=true"></iframe>
+    <iframe id="teacher-form" src="https://docs.google.com/forms/d/e/1FAIpQLSfCi3ogaou26I2HshuDpE2rXMeMvmclj72LSzOUg4MlwaOBEw/viewform?embedded=true"></iframe>
+  </section>
 
   <footer id="contact">
     <p>📞 7011593579 | 9919627896<br>
@@ -203,10 +206,10 @@
     function showForm(type) {
       document.getElementById("student-form").style.display = "none";
       document.getElementById("teacher-form").style.display = "none";
-      if (type === "student") {
-        document.getElementById("student-form").style.display = "block";
-      } else {
-        document.getElementById("teacher-form").style.display = "block";
+      const form = document.getElementById(type + "-form");
+      if (form) {
+        form.style.display = "block";
+        form.scrollIntoView({ behavior: "smooth" });
       }
     }
   </script>
