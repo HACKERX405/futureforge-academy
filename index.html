@@ -12,8 +12,8 @@
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       font-family: 'Poppins', sans-serif;
-      background: linear-gradient(to right, #00c6ff, #0072ff);
-      color: #fff;
+      background: linear-gradient(to right, #f9f9f9, #dfe9f3);
+      color: #333;
       overflow-x: hidden;
     }
     header {
@@ -21,8 +21,8 @@
       justify-content: space-between;
       align-items: center;
       padding: 1rem 2rem;
-      background-color: rgba(0, 0, 0, 0.3);
-      backdrop-filter: blur(6px);
+      background-color: #fff;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
       position: sticky;
       top: 0;
       z-index: 999;
@@ -30,23 +30,22 @@
     header img {
       height: 50px;
       border-radius: 10px;
-      background-color: #fff;
-      padding: 4px;
     }
     header nav a {
       margin: 0 1rem;
       text-decoration: none;
-      color: #fff;
+      color: #0072ff;
       font-weight: 600;
       transition: color 0.3s;
     }
-    header nav a:hover { color: #ffdd57; }
+    header nav a:hover { color: #ff5722; }
     .main {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
       align-items: center;
       padding: 4rem 2rem;
+      background-color: #e8f0fe;
     }
     .main-text {
       flex: 1;
@@ -55,21 +54,23 @@
     }
     .main-text h1 {
       font-size: 2.8rem;
-      color: #ffdd57;
+      color: #0072ff;
       margin-bottom: 1rem;
     }
     .typewriter-container {
       font-size: 1.1rem;
-      color: #fff;
       overflow: hidden;
       white-space: nowrap;
-      border-right: 2px solid #fff;
+      border-right: 2px solid #0072ff;
+      animation: typing 6s steps(100, end) 1, blink 0.75s step-end infinite;
       width: 100%;
-      animation: typing 7s steps(90, end) 1 normal both;
     }
     @keyframes typing {
       from { width: 0 }
       to { width: 100% }
+    }
+    @keyframes blink {
+      50% { border-color: transparent; }
     }
     .main-buttons {
       margin-top: 2rem;
@@ -81,16 +82,14 @@
       padding: 0.75rem 1.5rem;
       font-size: 1rem;
       font-weight: 600;
-      background-color: #fff;
-      color: #0072ff;
+      background-color: #0072ff;
+      color: #fff;
       border: none;
-      border-radius: 30px;
+      border-radius: 8px;
       cursor: pointer;
-      flex: 1 1 120px;
     }
     .main-buttons button:hover {
-      background-color: #ffdd57;
-      color: #000;
+      background-color: #0056d2;
     }
     .main-image {
       flex: 1;
@@ -102,8 +101,6 @@
       max-width: 350px;
       height: auto;
       border-radius: 12px;
-      background: #fff;
-      padding: 10px;
     }
     section { padding: 2rem; }
     .highlight-section, .faq {
@@ -113,19 +110,19 @@
       gap: 1.5rem;
     }
     .highlight-box, .card {
-      background-color: rgba(0,0,0,0.2);
+      background-color: #fff;
       border-radius: 12px;
       padding: 1rem;
       flex: 1 1 250px;
       text-align: center;
-      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+      transition: transform 0.4s ease;
     }
     .highlight-box:hover, .card:hover {
       transform: translateY(-5px);
-      box-shadow: 0 8px 20px rgba(255, 255, 255, 0.2);
     }
     .highlight-box h3, .card h3 {
-      color: #ffdd57;
+      color: #0072ff;
       margin-bottom: 0.5rem;
       font-size: 1.4rem;
     }
@@ -152,9 +149,10 @@
       height: 60px;
     }
     footer {
-      background: rgba(0,0,0,0.3);
+      background: #0072ff;
       text-align: center;
       padding: 2rem;
+      color: white;
       font-size: 0.9rem;
     }
     @media (max-width: 768px) {
