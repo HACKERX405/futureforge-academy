@@ -43,23 +43,10 @@
     }
     .main-text { flex: 1; max-width: 600px; padding-right: 2rem; }
     .main-text h1 { font-size: 2.8rem; color: #ffdd57; margin-bottom: 1rem; }
-    .typewriter-text {
+    .main-text p {
       font-size: 1.1rem;
       line-height: 1.8;
       color: #f8f9fa;
-      white-space: nowrap;
-      overflow: hidden;
-      border-right: 3px solid #fff;
-      width: 0;
-      animation: typing 5s steps(100, end) forwards, blink 0.7s step-end infinite;
-    }
-    @keyframes typing {
-      from { width: 0; }
-      to { width: 100%; }
-    }
-    @keyframes blink {
-      0%, 100% { border-color: transparent; }
-      50% { border-color: white; }
     }
     .main-buttons { margin-top: 2rem; }
     .main-buttons button {
@@ -124,7 +111,7 @@
   <section class="main" id="home">
     <div class="main-text">
       <h1>Empowering Learning in Greater Noida</h1>
-      <p class="typewriter-text">FutureForge Academy helps you find trusted home tutors from Pre-Primary to Class 10. Whether you're a student seeking help or a teacher looking for students, we connect you with the right match at your doorstep.</p>
+      <p>FutureForge Academy helps you find trusted home tutors from Pre-Primary to Class 10. Whether you're a student seeking help or a teacher looking for students, we connect you with the right match at your doorstep.</p>
       <div class="main-buttons">
         <button onclick="showForm('student')">Student Form</button>
         <button onclick="showForm('teacher')">Teacher Form</button>
@@ -135,3 +122,93 @@
       <img src="1.png" alt="Illustration">
     </div>
   </section>
+
+  <section class="highlight-section">
+    <div class="highlight-box">
+      <h3>📘 Subjects Offered</h3>
+      <ul>
+        <li>English, Hindi, Maths, Science</li>
+        <li>EVS, Drawing, Abacus, Computers</li>
+      </ul>
+    </div>
+    <div class="highlight-box">
+      <h3>🎓 Classes Covered</h3>
+      <ul>
+        <li>Pre-Primary to Class 10</li>
+        <li>CBSE, ICSE, State Board</li>
+      </ul>
+    </div>
+    <div class="highlight-box">
+      <h3>📍 Areas We Serve</h3>
+      <ul>
+        <li>Alpha, Beta, Gamma, Delta</li>
+        <li>Pi, Sigma, Knowledge Park</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="gallery">
+    <div class="card">
+      <img src="1.png" alt="gallery image" style="width:100%; border-radius: 10px;">
+      <h3>Smart Tutors</h3>
+    </div>
+    <div class="card">
+      <img src="1.png" alt="gallery image" style="width:100%; border-radius: 10px;">
+      <h3>Motivated Students</h3>
+    </div>
+  </section>
+
+  <section class="video-section">
+    <div class="card">
+      <h3>Why Choose Us</h3>
+      <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+    </div>
+  </section>
+
+  <section class="pricing">
+    <div class="card">
+      <h3>Basic</h3>
+      <p>₹500/month<br>1 Student Slot</p>
+    </div>
+    <div class="card">
+      <h3>Standard</h3>
+      <p>₹1000/month<br>Up to 3 Students</p>
+    </div>
+    <div class="card">
+      <h3>Premium</h3>
+      <p>₹1500/month<br>Unlimited Students</p>
+    </div>
+  </section>
+
+  <section class="faq">
+    <div class="card">
+      <h3>FAQs</h3>
+      <ul>
+        <li><strong>Q:</strong> Can I choose my tutor?<br><strong>A:</strong> Yes, based on subject and location.</li>
+        <li><strong>Q:</strong> Are timings flexible?<br><strong>A:</strong> Yes, tutors will contact to set time.</li>
+      </ul>
+    </div>
+  </section>
+
+  <iframe id="student-form" src="https://docs.google.com/forms/d/e/1FAIpQLSdHgMNPZBaAjkIxAkwbLgOkZtmuJrReK1c7PBfJ6tv3Nmw53A/viewform?embedded=true"></iframe>
+  <iframe id="teacher-form" src="https://docs.google.com/forms/d/e/1FAIpQLSfCi3ogaou26I2HshuDpE2rXMeMvmclj72LSzOUg4MlwaOBEw/viewform?embedded=true"></iframe>
+
+  <footer id="contact">
+    <p>📞 7011593579 | 9919627896<br>
+    📧 soham.kanaujia.25@gmail.com<br>
+    &copy; 2025 FutureForge Academy | Designed by Akash Rawat</p>
+  </footer>
+
+  <script>
+    function showForm(type) {
+      document.getElementById("student-form").style.display = "none";
+      document.getElementById("teacher-form").style.display = "none";
+      if (type === "student") {
+        document.getElementById("student-form").style.display = "block";
+      } else {
+        document.getElementById("teacher-form").style.display = "block";
+      }
+    }
+  </script>
+</body>
+</html>
