@@ -1,11 +1,13 @@
-<!-- All-in-one upgraded site with gallery, video, pricing, and FAQ -->
+<!-- Full site with animation, logo, forms and mobile view fixed -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>FutureForge Academy | Home Tuitions in Greater Noida</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
@@ -25,7 +27,7 @@
       top: 0;
       z-index: 999;
     }
-    header img { height: 50px; }
+    header img { height: 50px; border-radius: 10px; }
     header nav a {
       margin: 0 1rem;
       text-decoration: none;
@@ -46,12 +48,29 @@
       font-size: 2.8rem;
       color: #ffdd57;
       margin-bottom: 1rem;
-      font-family: 'Playfair Display', serif;
+    }
+    .typewriter-container::after {
+      content: "";
+      animation: typing 5s steps(40, end), blink-caret .75s step-end infinite;
+      white-space: nowrap;
+      overflow: hidden;
+      display: inline-block;
+      vertical-align: bottom;
+      border-right: 2px solid white;
     }
     .typewriter-container {
       font-size: 1.1rem;
-      line-height: 1.8;
-      color: #f8f9fa;
+      color: #fff;
+      width: 100%;
+      max-width: 100%;
+    }
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+    @keyframes blink-caret {
+      from, to { border-color: transparent }
+      50% { border-color: white; }
     }
     .main-buttons { margin-top: 2rem; display: flex; flex-wrap: wrap; gap: 1rem; }
     .main-buttons button {
@@ -85,7 +104,6 @@
       flex: 1 1 250px;
       text-align: center;
       transition: transform 0.4s ease, box-shadow 0.4s ease;
-      font-family: 'Playfair Display', serif;
     }
     .highlight-box:hover, .card:hover {
       transform: translateY(-5px);
@@ -99,7 +117,6 @@
     .highlight-box ul, .faq ul {
       padding-left: 1.2rem;
       text-align: left;
-      font-family: 'Poppins', sans-serif;
       font-size: 0.95rem;
     }
     iframe {
@@ -133,7 +150,7 @@
 </head>
 <body>
   <header>
-    <img src="logo.png" alt="FutureForge Logo">
+    <img src="https://i.ibb.co/HVkrddM/logo-futureforge.png" alt="FutureForge Logo">
     <nav>
       <a href="#">Home</a>
       <a href="#subjects">Subjects</a>
@@ -143,7 +160,7 @@
   <section class="main">
     <div class="main-text">
       <h1>FutureForge Academy</h1>
-      <div class="typewriter-container">Helping you find trusted tutors from Pre-Primary to Class 10 at your doorstep in Greater Noida.</div>
+      <div class="typewriter-container">FutureForge Academy helps you find trusted home tutors from Pre-Primary to Class 10 in Greater Noida.</div>
       <div class="main-buttons">
         <button onclick="showForm('student')">Student Form</button>
         <button onclick="showForm('teacher')">Teacher Form</button>
