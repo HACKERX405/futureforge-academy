@@ -39,23 +39,36 @@
     }
     .hero {
       display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-items: flex-start;
+      gap: 2rem;
       padding: 2rem;
-      text-align: center;
+      text-align: left;
     }
-    .hero h2 {
-      font-size: 1.8rem;
-      margin-bottom: 1rem;
+    .hero-section {
+      flex: 1 1 300px;
       animation: fadeIn 2s ease-in-out;
-      max-width: 700px;
+      background-color: rgba(255,255,255,0.05);
+      padding: 1.5rem;
+      border-radius: 12px;
     }
-    .hero p {
+    .hero h2, .hero-section h2 {
+      font-size: 1.6rem;
+      margin-bottom: 1rem;
+      color: #ffd166;
+    }
+    .hero p, .hero-section p, .hero-section ul {
       font-size: 1rem;
-      margin-bottom: 1.5rem;
-      max-width: 800px;
       line-height: 1.6;
+    }
+    .hero-section ul li {
+      margin: 0.3rem 0;
+    }
+    .hero-buttons {
+      text-align: center;
+      margin-top: 1rem;
     }
     .hero-buttons button {
       margin: 1rem;
@@ -114,19 +127,16 @@
       0% { opacity: 0; transform: translateY(30px); }
       100% { opacity: 1; transform: translateY(0); }
     }
-
-    /* Responsive Design for Mobile */
     @media screen and (max-width: 768px) {
       header h1 {
         font-size: 2rem;
       }
-      .hero h2 {
-        font-size: 1.3rem;
-        padding: 0 1rem;
+      .hero {
+        flex-direction: column;
+        padding: 1rem;
       }
-      .hero p {
-        font-size: 0.95rem;
-        padding: 0 1rem;
+      .hero-section {
+        padding: 1rem;
       }
       .hero-buttons button {
         width: 80%;
@@ -145,69 +155,63 @@
   </header>
 
   <section class="hero">
-    <h2>Shaping Bright Futures with Quality Education - Home Tuitions from Pre-Primary to Class 10 in Greater Noida</h2>
-    <p>FutureForge Academy is an educational platform connecting dedicated, qualified teachers with students in need of personalized learning. Based in Greater Noida, we specialize in providing home tuition services from Pre-Primary up to Class 10. Our mission is to forge strong academic futures by matching students with the right mentors, ensuring quality education at home. Whether you're a teacher looking to reach students, or a parent seeking trustworthy tutors — FutureForge is your bridge to success.</p>
-    <div class="hero-buttons">
-      <button onclick="showForm('student')">Login as Student</button>
-      <button onclick="showForm('teacher')">Login as Teacher</button>
+    <div class="hero-section">
+      <h2><span id="typing-text"></span></h2>
+      <p>FutureForge Academy connects dedicated, qualified teachers with students in Greater Noida for home tuition from Pre-Primary to Class 10. We match learners with mentors to build strong academic futures through personalized home-based education.</p>
+      <div class="hero-buttons">
+        <button onclick="showForm('student')">Login as Student</button>
+        <button onclick="showForm('teacher')">Login as Teacher</button>
+      </div>
+    </div>
+    <div class="hero-section">
+      <h2>Why Choose Us?</h2>
+      <ul>
+        <li>✅ Verified and Experienced Tutors</li>
+        <li>✅ Personalized Home-Based Learning</li>
+        <li>✅ All Sectors of Greater Noida Covered</li>
+        <li>✅ Flexible Timing & Affordable Rates</li>
+        <li>✅ Progress Updates for Parents</li>
+      </ul>
+    </div>
+    <div class="hero-section">
+      <h2>Classes Covered</h2>
+      <ul>
+        <li>👶 Pre-Primary (Nursery–UKG)</li>
+        <li>📚 Primary (Class 1–5)</li>
+        <li>🧠 Middle School (Class 6–8)</li>
+        <li>🎓 High School (Class 9–10)</li>
+      </ul>
+    </div>
+    <div class="hero-section">
+      <h2>Subjects Offered</h2>
+      <ul>
+        <li>📘 English</li>
+        <li>📗 Mathematics</li>
+        <li>📙 Science</li>
+        <li>📕 Hindi</li>
+        <li>📒 EVS</li>
+        <li>🧮 Abacus</li>
+        <li>🎨 Drawing</li>
+        <li>💻 Computers</li>
+      </ul>
+    </div>
+    <div class="hero-section">
+      <h2>Greater Noida Areas</h2>
+      <ul>
+        <li>🏡 Alpha, Beta, Gamma, Delta</li>
+        <li>🏡 Zeta, Pi, Sigma, Omicron</li>
+        <li>🏡 Knowledge Park & Nearby</li>
+      </ul>
+    </div>
+    <div class="hero-section">
+      <h2>Testimonials</h2>
+      <ul>
+        <li>👩‍👧 "My daughter’s grades improved in 2 months!" – Ritu (Parent)</li>
+        <li>👨‍🎓 "Now I enjoy studying!" – Aryan (Class 9)</li>
+        <li>👩‍🏫 "Connected with students near me easily." – Kavita (Teacher)</li>
+      </ul>
     </div>
   </section>
-
-<!-- Why Choose Us Section -->
-<section class="hero">
-  <h2>Why Choose FutureForge?</h2>
-  <ul style="list-style-type: none; font-size: 1rem; padding: 1rem 0;">
-    <li>✅ Verified and Experienced Tutors</li>
-    <li>✅ Personalized Learning at Home</li>
-    <li>✅ Coverage across all sectors of Greater Noida</li>
-    <li>✅ Flexible Timing & Affordable Rates</li>
-    <li>✅ Weekly Progress Reports for Parents</li>
-  </ul>
-</section>
-
-<!-- Classes Covered Section -->
-<section class="hero">
-  <h2>Classes Covered</h2>
-  <p>We provide expert tuition for the following class groups:</p>
-  <ul style="list-style-type: none; padding: 1rem 0; font-size: 1rem;">
-    <li>👶 Pre-Primary (Nursery, LKG, UKG)</li>
-    <li>📚 Primary (Class 1 to 5)</li>
-    <li>🧠 Middle School (Class 6 to 8)</li>
-    <li>🎓 High School (Class 9 & 10)</li>
-  </ul>
-</section>
-
-<!-- Area Coverage Section -->
-<section class="hero">
-  <h2>Area Coverage in Greater Noida</h2>
-  <p>Our tutors are available in the following locations:</p>
-  <ul style="list-style-type: none; padding: 1rem 0; font-size: 1rem;">
-    <li>🏡 Alpha 1, Alpha 2</li>
-    <li>🏡 Beta 1, Beta 2</li>
-    <li>🏡 Gamma 1, Gamma 2</li>
-    <li>🏡 Delta 1, Delta 2</li>
-    <li>🏡 Zeta, Pi, Omicron, Sigma</li>
-    <li>🏡 Knowledge Park & Nearby Areas</li>
-  </ul>
-</section>
-
-<!-- Subjects Offered Section -->
-  <section class="hero">
-    <h2>Subjects Offered</h2>
-    <p>We provide expert home tuition in the following subjects from Pre-Primary to Class 10:</p>
-    <ul style="list-style-type: none; padding: 1rem 0; font-size: 1rem;">
-      <li>📘 English</li>
-      <li>📗 Mathematics</li>
-      <li>📙 Science (Physics, Chemistry, Biology)</li>
-      <li>📕 Hindi</li>
-      <li>📒 Environmental Studies (EVS)</li>
-      <li>🧮 Mental Math / Abacus</li>
-      <li>🎨 Drawing & Craft</li>
-      <li>💻 Computer Basics</li>
-    </ul>
-  </section>
-
-  
 
   <div id="thank-you" class="thank-you">✅ Thank you for choosing FutureForge Academy! Please fill out the form below.</div>
 
@@ -233,6 +237,18 @@
         document.getElementById("teacher-form").style.display = "block";
       }
     }
+
+    const text = "Shaping Bright Futures with Quality Education - Home Tuitions from Pre-Primary to Class 10 in Greater Noida";
+    const typingElement = document.getElementById("typing-text");
+    let i = 0;
+    function typeEffect() {
+      if (i < text.length) {
+        typingElement.innerHTML += text.charAt(i);
+        i++;
+        setTimeout(typeEffect, 40);
+      }
+    }
+    window.onload = typeEffect;
   </script>
 </body>
 </html>
