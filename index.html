@@ -1,4 +1,3 @@
-<!-- Full 220+ line website with animation, dark/light mode, testimonials, WhatsApp contact, admin panel, dashboard, Google Forms for student & teacher -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,8 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="FutureForge Academy connects trusted tutors with students from Pre-Primary to Class 10 in Greater Noida.">
   <title>FutureForge Academy | Home Tutors in Greater Noida</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
     body {
@@ -23,6 +20,7 @@
     }
     header {
       display: flex;
+      flex-wrap: wrap;
       justify-content: space-between;
       align-items: center;
       padding: 1rem 2rem;
@@ -67,6 +65,8 @@
     }
     .btn-teacher { background: #007bff; }
     .btn-student { background: #28a745; }
+    .btn-dashboard { background: #6f42c1; }
+    .btn-admin { background: #dc3545; }
     .testimonials {
       background: #f0f0f0;
       padding: 2rem;
@@ -93,6 +93,10 @@
       text-align: center;
       padding: 1rem;
     }
+    @media (max-width: 768px) {
+      .hero { flex-direction: column; text-align: center; }
+      header { flex-direction: column; align-items: flex-start; }
+    }
   </style>
 </head>
 <body>
@@ -113,6 +117,8 @@
       <div class="btns">
         <a class="btn-teacher" href="https://docs.google.com/forms/d/e/1FAIpQLSfCi3ogaou26I2HshuDpE2rXMeMvmclj72LSzOUg4MlwaOBEw/viewform" target="_blank">Teacher Form</a>
         <a class="btn-student" href="https://docs.google.com/forms/d/e/1FAIpQLSe1pH4xRtE4ThGpmmBoTkMHhTKs2pb6PmoP6xVYcMRSZIlQmA/viewform" target="_blank">Student Form</a>
+        <a class="btn-dashboard" href="#">Dashboard</a>
+        <a class="btn-admin" href="#">Admin Panel</a>
       </div>
     </div>
     <div>
@@ -137,6 +143,8 @@
     <h2>FAQs</h2>
     <p>Q: Can I choose my tutor?<br>A: Yes, based on subject and location.</p>
     <p>Q: Are timings flexible?<br>A: Yes, tutors contact you for scheduling.</p>
+    <h2>📧 Email Alerts</h2>
+    <p>Email alerts will be sent to admin when a new form is submitted (feature coming soon!).</p>
   </section>
 
   <a class="whatsapp" href="https://wa.me/918755099850" target="_blank">📱 Chat on WhatsApp</a>
